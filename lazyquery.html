@@ -3,8 +3,8 @@
     <head> 
         <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
     </head> 
-    <body> 
-        <span>:(</span>
+    <body style="background-color:white;"> 
+        <div>:( Lame</div>
         <script src="lazyquery.min.js"></script>
         <script>
 
@@ -12,12 +12,19 @@
             // (or a different version than 1.4.3)
             // $.jqueryurl = '/jquery/dist/jquery.js';
 
-            $(function () {
-                $('body').css('background-color', 'red');
+            $(document).ready(function () {
+                $('div').css('color', 'white').animate({
+                    'font-size' : '50px',
+                    'height'    : '52px',
+                },
+                'slow',
+                function () {
+                    $(this).text(':D Awesome!');
+                });
             });
 
-            $(document).ready(function () {
-                $('span').text('Awesome!');
+            $(function () {
+                $('body').css('background-color', 'black');
             });
 
         </script>

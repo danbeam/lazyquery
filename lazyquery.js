@@ -20,13 +20,11 @@
 
     var q = [],
 
-        j = function () {
-            for (var i = 0, a = arguments, l = a.length; i < l; ++i) {
-                if ('function' === typeof a[i]) {
-                    q.push(a[i]);
-                }
+        j = function (a) {
+            if ('function' === typeof a) {
+                q.push(a);
             }
-            return j;
+            return g.document === a ? {'ready':j} : j;
         },
 
         p = function () {
@@ -52,9 +50,6 @@
 
     // start polling when there are no more synchronous scripts / UI refreshes
     g.setTimeout(p, 0);
-
-    // create $(document).ready alias
-    j.ready = j;
 
     // set to global
     g.$ = g.jQuery = j;
