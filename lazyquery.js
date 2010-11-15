@@ -50,7 +50,7 @@
                 };
             };
 
-    // start polling on when synchronous scripts stop
+    // start polling when there are no more synchronous scripts / UI refreshes
     g.setTimeout(p, 0);
 
     // create $(document).ready alias
