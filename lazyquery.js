@@ -37,7 +37,7 @@
                 }
                 s = g.document.createElement('script');
                 s.setAttribute('type', 'text/javascript');
-                s.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js');
+                s.setAttribute('src', j.jqueryurl || '//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js');
                 b[0].appendChild(s);
                 s.loaded = false;
                 s.onreadystatechange = s.onload = function () {
