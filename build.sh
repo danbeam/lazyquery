@@ -1,2 +1,3 @@
 #!/bin/bash
-( head -17 lazyquery.js && echo -n ";;;;;" && yui --type js --preserve-semi lazyquery.js ) > `dirname $0`/lazyquery.min.js
+dir=`dirname $0`;
+( head -17 $dir/lazyquery.js && echo -n ";;;;;" && yui --type js --preserve-semi $dir/lazyquery.js ) > $dir/lazyquery.min.js
