@@ -47,7 +47,7 @@ All you have to do to change where lazyquery looks for jQuery is change 1 variab
         // change this before the end of the document!
         $.jqueryurl = '/my/copy/of/jquery.js';
 
-        $(function () {
+        jQuery(function () {
             // do something awesome with jQuery when the DOM is ready!
         });
         
