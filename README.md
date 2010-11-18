@@ -36,3 +36,24 @@ But what if I want to do something before the DOM is ready?
 -----------------------------------------------------------
 
 Well, this is a good question.  I've considered putting jQuery's [ajax](https://github.com/jquery/jquery/blob/master/src/ajax.js) or [core](https://github.com/jquery/jquery/blob/master/src/core.js) into lazyquery, but they're kinda big and duplicate code and I'm ... well lazy.  I also figured you'd probably be able to wait for the asynchronous copy to be available before you use `$.ajax` or `$.each` (in the spirit of progressive enhancement), but let me know if this is not the case.
+
+What if I want to use my own version of jQuery, not Google's?
+-------------------------------------------------------------
+
+All you have to do to change where lazyquery looks for jQuery is change 1 variable!
+
+    <script>
+        
+        // change this before the end of the document!
+        $.jqueryurl = '/my/copy/of/jquery.js';
+
+        $(function () {
+            // do something awesome with jQuery when the DOM is ready!
+        });
+        
+    </script>
+
+What if I want to use jQuery plug-ins that require $.extend or $.fn?
+--------------------------------------------------------------------
+
+I'm working on this.
